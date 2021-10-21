@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
 public class Enu01_Hipotenusa {
-    /*
-     * Fer un programa que donat la base i l’altura d’un triangle rectangle, calculi
-     * la seva hipotenusa i la mostri per pantalla.
-     */
     public static void main(String[] args) throws Exception {
         double base, alssada;
         float hipotenusa;
