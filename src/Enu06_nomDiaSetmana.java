@@ -5,7 +5,7 @@ public class Enu06_nomDiaSetmana {
     public static void main(String[] args) {
         Scanner teclat = new Scanner(System.in);
         int diaSetmana;
-        String nomDiaSetmana;
+        // String nomDiaSetmana;
 
         do {
             System.out.print("Introdueix el número de dia de la setmana: ");

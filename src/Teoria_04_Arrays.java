@@ -1,11 +1,15 @@
 public class Teoria_04_Arrays {
     public static void main(String[] args) {
-        int[] arrayExemple = new int[150]; // Declarant i dimensionant l'array
+        var arrayExemple = new int[150]; // Declarant i dimensionant l'array
         int novaLongitud = 200;
 
         // Redimensionant l'array
         arrayExemple = new int[novaLongitud];
+        // Recorregut array.
+        for (int i = 0; i < arrayExemple.length; i++) {
+            System.out.println(arrayExemple[i]);
 
+        }
         // Declaro,dimensiono i Inicialitzo.
         String[] diesSetmana = { "Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte", "Diumenge" };
 
