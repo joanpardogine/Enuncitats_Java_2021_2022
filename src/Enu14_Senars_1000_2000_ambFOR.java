@@ -1,4 +1,4 @@
-public class Enu13_Senars_1000_2000_ambFOR {
+public class Enu14_Senars_1000_2000_ambFOR {
     public static void main(String[] args) {
         int petit = 1000;
         int gran = 2000;
