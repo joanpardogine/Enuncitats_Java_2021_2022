@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Enc15_potencia {
+public class Enu15_potencia {
     public static void main(String[] args) {
         Scanner teclat = new Scanner(System.in);
         int base, potencia, resultat;
