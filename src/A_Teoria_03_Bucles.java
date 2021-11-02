@@ -1,4 +1,4 @@
-public class Teoria_03_Bucles {
+public class A_Teoria_03_Bucles {
     public static void main(String[] args) {
         // 1r Bucle-> Tipus While
         int value = 10;

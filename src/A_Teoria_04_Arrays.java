@@ -1,4 +1,4 @@
-public class Teoria_04_Arrays {
+public class A_Teoria_04_Arrays {
     public static void main(String[] args) {
         var arrayExemple = new int[150]; // Declarant i dimensionant l'array
         int novaLongitud = 200;
