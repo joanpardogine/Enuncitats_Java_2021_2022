@@ -16,6 +16,7 @@ public class Enu17_empresaFulmigacio {
 		double importTotal;
 		String nomGranger;
 		String opcioEscollida;
+		char opcioEscollidaLletra;
 		double preuProducte;
 		double qtatDeGrangers;
 		int[] qtatDeCadaTipus = { 0, 0, 0, 0 };
@@ -35,10 +36,11 @@ public class Enu17_empresaFulmigacio {
 				System.out.println(
 						"Tipus 4: fumigació contra tots els tipus anteriors, 190 Euro per hectàrea. (escull D)");
 				System.out.println("Quin tipus de fumigació desistjes fer (A/B/C/D)?");
-				opcioEscollida = teclat.next();
+				opcioEscollida = teclat.next().toUpperCase(); 		// toUpperCase() => canvia la lletra llegida a majúscula.
+				// opcioEscollidaLletra = teclat.next().charAt(0); // Per lelgir només un caràcter
 				if (!(opcioEscollida.equals("A") || opcioEscollida.equals("B") || opcioEscollida.equals("C")
 						|| opcioEscollida.equals("D"))) {
-					System.out.println("ERROR!");
+					System.out.println("ERROR, has d'escollir una lletra entre A i D!");
 				}
 			} while (!(opcioEscollida.equals("A") || opcioEscollida.equals("B") || opcioEscollida.equals("C")
 					|| opcioEscollida.equals("D"))); // REPETIR MENTRE OPCIO NO ÉS A o B o C o D
