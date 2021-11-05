@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Enu17_empresaFulmigacio {
+public class Enu17_empresaFulmigacio_versio2 {
 
 	public static void main(String args[]) throws Exception {
 		final int EXTENSIO_DTE = 100;
@@ -20,8 +20,11 @@ public class Enu17_empresaFulmigacio {
 		double preuProducte;
 		double qtatDeGrangers;
 		int[] qtatDeCadaTipus = { 0, 0, 0, 0 };
+		int[] preuDeCadaTipus = { 50, 70, 80, 190 };
 		double importTotalVendes = 0;
 		qtatDeGrangers = 3;
+
+		int tipusEscollit = 0;
 
 		do { // REPETIR PER CADA GRANGER
 			System.out.print("Entra el nom del granger: ");
@@ -36,8 +39,9 @@ public class Enu17_empresaFulmigacio {
 				System.out.println(
 						"Tipus 4: fumigació contra tots els tipus anteriors, 190 Euro per hectàrea. (escull D)");
 				System.out.println("Quin tipus de fumigació desistjes fer (A/B/C/D)?");
-				opcioEscollida = teclat.next().toUpperCase(); 		// toUpperCase() => canvia la lletra llegida a majúscula.
-				// opcioEscollidaLletra = teclat.next().charAt(0); // Per lelgir només un caràcter
+				opcioEscollida = teclat.next().toUpperCase(); // toUpperCase() => canvia la lletra llegida a majúscula.
+				// opcioEscollidaLletra = teclat.next().charAt(0); // Per lelgir només un
+				// caràcter
 				if (!(opcioEscollida.equals("A") || opcioEscollida.equals("B") || opcioEscollida.equals("C")
 						|| opcioEscollida.equals("D"))) {
 					System.out.println("ERROR, has d'escollir una lletra entre A i D!");
@@ -46,22 +50,32 @@ public class Enu17_empresaFulmigacio {
 					|| opcioEscollida.equals("D"))); // REPETIR MENTRE OPCIO NO ÉS A o B o C o D
 
 			if (opcioEscollida.equals("A")) {
-				preuProducte = 50;
-				qtatDeCadaTipus[0]++;
+				// preuProducte = 50;
+				// preuProducte = preuDeCadaTipus[0];
+				// qtatDeCadaTipus[0]++;
+				tipusEscollit = 0;
 			} else {
 				if (opcioEscollida.equals("B")) {
-					preuProducte = 70;
-					qtatDeCadaTipus[1]++;
+					// preuProducte = 70;
+					// preuProducte = preuDeCadaTipus[1];
+					// qtatDeCadaTipus[1]++;
+					tipusEscollit = 1;
 				} else {
 					if (opcioEscollida.equals("C")) {
-						preuProducte = 80;
-						qtatDeCadaTipus[2]++;
+						// preuProducte = 80;
+						// preuProducte = preuDeCadaTipus[2];
+						// qtatDeCadaTipus[2]++;
+						tipusEscollit = 2;
 					} else {
-						preuProducte = 190;
-						qtatDeCadaTipus[3]++;
+						// preuProducte = 190;
+						// preuProducte = preuDeCadaTipus[3];
+						// qtatDeCadaTipus[3]++;
+						tipusEscollit = 3;
 					}
 				}
 			}
+			preuProducte = preuDeCadaTipus[tipusEscollit];
+			qtatDeCadaTipus[tipusEscollit]++;
 
 			System.out.println("Genial!, ara que has escollit la opció " + opcioEscollida
 					+ ", cal que indiquis quina és l`extensió (en hectàrees) a fumigar.");
