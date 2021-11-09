@@ -7,6 +7,8 @@ public class A_Teoria_06A_TryCatch {
         } catch (Exception errorAGestionar) {
             System.out.println("Alguna cosa ha fallat.");
             System.out.println("L'error ha estat " + errorAGestionar.getMessage());
+        } finally {
+            System.out.println("La comanda 'try catch' ha acabat!.");
         }
     }
 }
