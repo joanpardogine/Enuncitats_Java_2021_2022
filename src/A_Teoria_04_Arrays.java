@@ -18,5 +18,10 @@ public class A_Teoria_04_Arrays {
         for (int i = 0; i < diesSetmana.length; i++) {
             System.out.println(diesSetmana[i]);
         }
+
+        // Recorregut per mostrar el contingut de l'Array arrayExemple.
+        for (int i = 0; i < arrayExemple.length; i++) {
+            System.out.println(arrayExemple[i]);
+        }
     }
 }
