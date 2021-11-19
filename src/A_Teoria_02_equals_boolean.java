@@ -5,13 +5,12 @@ public class A_Teoria_02_equals_boolean {
         // final String NOM_JOAN = "Joan";
 
         char[] nom1 = new char[4];
-
         char[] nom2 = new char[4];
 
         nom1[0] = 'J';
         nom1[1] = 'o';
         nom1[2] = 'a';
-        nom1[3] = 'n';
+        // nom1[3] = 'n';
 
         nom2[0] = 'J';
         nom2[1] = 'o';
@@ -21,23 +20,27 @@ public class A_Teoria_02_equals_boolean {
         int comptadorLletresIguals = 0;
 
         // for (int i = 0; i < nom1.length; i++) {
+        if (nom1.equals(nom2)) { // (nom1 == nom2)
+            System.out.println("Són iguals!");
+            // comptadorLletresIguals++;
+        } else {
+            System.out.println("NO Són iguals!");
+
+        }
+        // }
+
+        // boolean sonDiferents;
+        // sonDiferents = false;
+
+        // int i = 0; // for ==> i=0
+        // do {
         // if (nom1[i] == nom2[i]) {
         // comptadorLletresIguals++;
+        // } else {
+        // sonDiferents = true;
         // }
-        // }
-
-        boolean sonDiferents;
-        sonDiferents = false;
-
-        int i = 0; // for ==> i=0
-        do {
-            if (nom1[i] == nom2[i]) {
-                comptadorLletresIguals++;
-            } else {
-                sonDiferents = true;
-            }
-            i++;
-        } while ((i < nom1.length) || (sonDiferents == true));
+        // i++;
+        // } while ((i < nom1.length) || (sonDiferents == true));
 
         System.out.println("comptadorLletresIguals = " + comptadorLletresIguals);
 

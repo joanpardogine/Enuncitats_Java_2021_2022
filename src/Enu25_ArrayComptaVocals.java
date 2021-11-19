@@ -30,9 +30,9 @@ public class Enu25_ArrayComptaVocals {
         }
         char lletra;
         long tempsInicial, tempsFinal;
-
+        // int comptaNoVocals = 0;
         // FOR procesament de dades
-        tempsInicial = System.nanoTime();
+        tempsInicial = System.nanoTime(); // currentTimeMillis();
         for (int i = 0; i < arrEntrada.length; i++) { // Per recorrer una a una totes les cadenes
             for (int j = 0; j < arrEntrada[i].length(); j++) { // Per recorrer un a un tots els caracters
                 lletra = arrEntrada[i].toLowerCase().charAt(j);
@@ -66,23 +66,31 @@ public class Enu25_ArrayComptaVocals {
                 case 'u', 'ù', 'ú':
                     comptaVocals[i][4]++;
                     break;
+                // default:
+                // comptaNoVocals++;
                 }
                 // FINAL Segona OPCIÓ
             }
         }
 
-        tempsFinal = System.nanoTime();
-        System.out.println("Temps total d'execució: " + ((tempsFinal - tempsInicial)) + " nanoseg.");
+        tempsFinal = System.nanoTime(); // currentTimeMillis();
 
         // FOR per mostrar tots els comptadors
         for (int i = 0; i < comptaVocals.length; i++) { // Per recorrer una a una totes les cadenes
             System.out.print("La cadena " + arrEntrada[i] + " té: ");
             for (int j = 0; j < comptaVocals[i].length; j++) {
-                System.out.print(comptaVocals[i][j] + ", ");
+                System.out.print(comptaVocals[i][j]);
+                if (j < (comptaVocals[i].length - 1)) {
+                    System.out.print(", ");
+                } else {
+                    System.out.print(".");
+
+                }
             }
             System.out.println();
         }
 
+        System.out.println("\nTemps total d'execució: " + ((tempsFinal - tempsInicial)) + " nanoseg.");
         teclat.close();
     }
 }
