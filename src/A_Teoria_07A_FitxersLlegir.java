@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class A_Teoria_07A_FitxersLlegir {
     public static void main(String[] args) {
+        // Recordar que el Endcoding cal que sigui => "Windows 1250"
+
         // Nom de fitxer del que volem llegit
         File fitxer = new File("fitxer_llegir.txt");
         Scanner punter = null;
