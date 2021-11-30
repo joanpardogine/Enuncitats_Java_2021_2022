@@ -6,6 +6,7 @@ public class A_Teoria_07A_FitxersLlegir {
         // Nom de fitxer del que volem llegit
         File fitxer = new File("fitxer_llegir.txt");
         Scanner punter = null;
+        String linia = "";
 
         try {
             // Llegim el contingut del fitxer
@@ -14,7 +15,7 @@ public class A_Teoria_07A_FitxersLlegir {
 
             // Llegim una línia del contingut del fitxer
             while (punter.hasNextLine()) {
-                String linia = punter.nextLine(); // Salvem la linia dins d'un String
+                linia = punter.nextLine(); // Salvem la linia dins d'un String
                 System.out.println(linia); // Mostrem la linia
             }
 

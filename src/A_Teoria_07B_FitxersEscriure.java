@@ -4,7 +4,12 @@ public class A_Teoria_07B_FitxersEscriure {
 
     public static void main(String[] args) {
 
-        String[] paraules = { "Un", "Dos", "Tres", "Quatre", "Cinc", "Sis", "Set", "..." };
+        String[] paraules = { "En un lugar de la Macha",
+                "de cuyo nombre no quiero acordarme",
+                "no ha mucho tiempo que vivia un hidalgo",
+                "de los de lanza en astillero",
+                "adarga antigua, rocín flaco y galgo corredor",
+                "..." };
 
         /** 1a FORMA D'ESCRITURE **/
         FileWriter fitxer = null;
@@ -13,8 +18,8 @@ public class A_Teoria_07B_FitxersEscriure {
             fitxer = new FileWriter("fitxer_escriure.txt");
 
             // Escrivim línia a línia en el fitxer
-            for (String linia : paraules) {
-                fitxer.write(linia + "\n");
+            for (int i = 0; i < paraules.length; i++) { // String linia : paraules) {
+                fitxer.write(paraules[i] + "\n");
             }
 
             fitxer.close();
