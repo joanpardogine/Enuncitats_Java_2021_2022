@@ -1,32 +1,59 @@
-public class Enu29_DesplassaIndex {
-    public static void main(String args[]) throws Exception {
-        int[] arrEnters1 = new int[5];
-        int[] arrEnters2 = new int[5];
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
-        // FOR per inicialitzar array
-        for (int i = 0; i < arrEnters1.length; i++) {
-            arrEnters1[i] = (int) (Math.random() * 100);
+public class Enu30_DesplassaNPosicions {
+    public static void main(String args[]) throws Exception {
+
+        final int MIDA = 7;
+        // int[] arrayInicial = { 34, 123, 324, 78, 45, 125, 154 };
+        int[] arrayInicial = new int[MIDA];
+        int[] arrayFinal = new int[MIDA];
+        boolean esCorrecte = false;
+        Scanner teclat = new Scanner(System.in);
+
+        int desplassament = 0;
+        do {
+            try {
+                System.out.print("Entra els despalaçament (enter): ");
+                desplassament = teclat.nextInt();
+                if (desplassament < MIDA) {
+                    esCorrecte = true;
+                } else {
+                    System.out.println("ERROR! Només pots entrar nombres més petits que " + MIDA + ".");
+                }
+            } catch (InputMismatchException errorAGestionar) {
+                System.out.println("ERROR! Només pots entrar nombres.");
+            } finally {
+                teclat.nextLine(); // Netejem el buffer d'entrada
+            }
+        } while (esCorrecte == false);
+
+        // FOR per inicialitzar arrayInicial
+        for (int i = 0; i < arrayInicial.length; i++) {
+            arrayInicial[i] = (int) (Math.random() * 100);
         }
 
-        // FOR per mostrar array
-        for (int i = 0; i < arrEnters1.length; i++) {
-            System.out.print(" " + arrEnters1[i]);
+        // FOR per mostrar arrayInicial
+        for (int i = 0; i < arrayInicial.length; i++) {
+            System.out.print(" " + arrayInicial[i]);
         }
         System.out.println();
-        // FOR per processar array
-        for (int i = arrEnters1.length - 1; i >= 0; i--) {
-            if (i != 0) {
-                arrEnters2[i] = arrEnters1[i - 1];
+
+        // FOR pel procesament
+        for (int i = 0; i < arrayInicial.length; i++) {
+            if (i + desplassament >= arrayInicial.length) {
+                arrayFinal[(i + desplassament) - arrayInicial.length] = arrayInicial[i];
             } else {
-                arrEnters2[i] = arrEnters1[arrEnters1.length - 1];
+                arrayFinal[(i + desplassament)] = arrayInicial[i];
             }
         }
+
         System.out.println();
 
-        // FOR per mostrar array
-        for (int i = 0; i < arrEnters2.length; i++) {
-            System.out.print(" " + arrEnters2[i]);
+        // FOR per mostrar arrayInicial
+        for (int i = 0; i < arrayFinal.length; i++) {
+            System.out.print(" " + arrayFinal[i]);
         }
-
+        teclat.close();
     }
 }
