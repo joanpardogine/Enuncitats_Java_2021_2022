@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Enu32_MaximaDiferenciaEntreTots {
+public class Enu32_MaximaDiferenciaEntreConsecitius {
     public static void main(String args[]) throws Exception {
 
         // final int MIDA = 7;
