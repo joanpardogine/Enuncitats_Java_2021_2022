@@ -33,7 +33,7 @@ public class Enu32_MaximaDiferenciaEntreTots {
             if (diferencia > difMaxima) {
                 difMaxima = diferencia;
                 pos1aDif = i;
-                pos1aDif = i + 1;
+                pos2aDif = i + 1;
             }
         }
 
