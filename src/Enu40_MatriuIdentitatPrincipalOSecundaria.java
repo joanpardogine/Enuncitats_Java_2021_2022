@@ -61,9 +61,9 @@ public class Enu40_MatriuIdentitatPrincipalOSecundaria {
             for (int i = 0; i < matriuIdentitat.length; i++) {
                 for (int j = 0; j < matriuIdentitat[i].length; j++) {
                     if (i + j == matriuIdentitat.length - 1) {
-                        matriuIdentitat[i][j] = 1;
+                        matriuIdentitat[i][j] = U;
                     } else {
-                        matriuIdentitat[i][j] = 0;
+                        matriuIdentitat[i][j] = ZERO;
                     }
                 }
             }
