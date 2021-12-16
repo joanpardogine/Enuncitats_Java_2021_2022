@@ -24,17 +24,8 @@ public class Enu38_MatriuTrasposta {
         System.out.print("Entra la quantitat de files: ");
         files = teclat.nextInt();
 
-        do {
-            System.out.print("Entra la quantitat de columnes: ");
-            columnes = teclat.nextInt();
-            if (files != columnes) {
-                System.out.print("Torna a entrar "
-                        + "la quantitat de columnes!\n"
-                        + "Recorda que cal que sigui "
-                        + "igual a les files ("
-                        + files + ")!\n");
-            }
-        } while (files != columnes);
+        System.out.print("Entra la quantitat de columnes: ");
+        columnes = teclat.nextInt();
 
         int matriu[][] = new int[files][columnes];
         int matriuTras[][] = new int[columnes][files];
