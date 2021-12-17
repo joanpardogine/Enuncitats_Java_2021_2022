@@ -2,17 +2,37 @@ import java.util.Scanner;
 
 public class Enu41_SumaDeMatrius {
 
+    static void pintaLinia(int columnes) {
+        int comptador = 0;
+        do {
+            System.out.print("+---");
+            comptador++;
+        } while (comptador < columnes);
+        System.out.println("+");
+    }
+
     static void mostraMatriu(int[][] matriuRebuda) {
+        int columnes = matriuRebuda[0].length;
+        pintaLinia(columnes);
         // FOR per mostrar array
         for (int i = 0; i < matriuRebuda.length; i++) {
             for (int j = 0; j < matriuRebuda[i].length; j++) {
-                if (matriuRebuda[i][j] < 10) {
-                    System.out.print(" " + matriuRebuda[i][j] + " ");
+                if (matriuRebuda[i][j] > 0) {
+                    if (matriuRebuda[i][j] < 10) {
+                        System.out.print("|  " + matriuRebuda[i][j]);
+                    } else {
+                        System.out.print("| " + matriuRebuda[i][j]);
+                    }
                 } else {
-                    System.out.print(matriuRebuda[i][j] + " ");
+                    if (matriuRebuda[i][j] > -10) {
+                        System.out.print("| " + matriuRebuda[i][j]);
+                    } else {
+                        System.out.print("|" + matriuRebuda[i][j]);
+                    }
                 }
             }
-            System.out.println();
+            System.out.println("|");
+            pintaLinia(columnes);
         }
     }
 
@@ -22,7 +42,10 @@ public class Enu41_SumaDeMatrius {
         for (int i = 0; i < matriuAOmplir.length; i++) { // for per recorrer les files
             for (int j = 0; j < matriuAOmplir[i].length; j++) { // for per recorrer les columnes
                 // System.out.print("Entra el valor de [" + i + "][" + j + "] = ");
-                matriuAOmplir[i][j] = (int) (Math.random() * 100);// teclat.nextInt();
+                int min = -99;
+                int max = 99;
+
+                matriuAOmplir[i][j] = (int) (Math.random() * (max - min) + min);// teclat.nextInt();
             }
             System.out.println();
         }
@@ -43,7 +66,6 @@ public class Enu41_SumaDeMatrius {
 
         int[][] matriuA = new int[files][columnes];
         int[][] matriuB = new int[files][columnes];
-        int[][] matriuSuma = new int[files][columnes];
 
         // FOR introducció de dades
         matriuA = llegirMatriu(files, columnes);
@@ -54,16 +76,6 @@ public class Enu41_SumaDeMatrius {
         System.out.println("Matriu B");
         mostraMatriu(matriuB);
 
-        // for per introduir dades
-
-        for (int i = 0; i < matriuSuma.length; i++) {
-            for (int j = 0; j < matriuSuma[i].length; j++) {
-                matriuSuma[i][j] = matriuA[i][j] + matriuB[i][j];
-            }
-        }
-
-        System.out.println("Matriu Suma");
-        mostraMatriu(matriuSuma);
         teclat.close();
     }
 }
