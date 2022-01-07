@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class activitat1 {
+public class Examen_20211220_MatIArr_activitat1 {
 
   public static void main(String[] args) throws Exception {
 
@@ -14,9 +14,8 @@ public class activitat1 {
     int count = 0;
 
     //Escrivim a l'array els valors aleatoris
-    for(int i = 0; i < array.length; i++)
-    {
-      array[i] = (int)(Math.random()*(MAX-MIN)+MIN);
+    for (int i = 0; i < array.length; i++) {
+      array[i] = (int) (Math.random() * (MAX - MIN) + MIN);
     }
 
     //Demanem el valor a buscar dins l'array
@@ -24,13 +23,13 @@ public class activitat1 {
     n = sc.nextInt();
 
     //Lògica: busquem quantes vegades es repeteix el valor dins l'array
-    for(int i = 0; i < array.length; i++)
-    {
-      if (array[i] == n) count++;
+    for (int i = 0; i < array.length; i++) {
+      if (array[i] == n)
+        count++;
     }
 
     //Mostrem resultats
-    if (count == 0){
+    if (count == 0) {
       System.out.print("El número N = " + n + " no ha sortit cap vegada.\n");
     } else {
       System.out.print("El número N = " + n + " ha sortit " + count + " vegades.\n");
@@ -38,6 +37,5 @@ public class activitat1 {
 
     sc.close();
   }
-
 
 }

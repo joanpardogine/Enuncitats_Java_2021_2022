@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class activitat2 {
+public class Examen_20211220_MatIArr_activitat2 {
 
   public static void main(String[] args) throws Exception {
 
@@ -22,19 +22,18 @@ public class activitat2 {
     int[] array = new int[size];
 
     //Omplim l'array
-    for (int i = 0; i < array.length; i++){
+    for (int i = 0; i < array.length; i++) {
       array[i] = value;
-      value+=increment;
+      value += increment;
     }
 
     //Mostrem el resultat
-    for (int i = 0; i < array.length; i++){
-     
-        System.out.print(array[i]+" ");
+    for (int i = 0; i < array.length; i++) {
+
+      System.out.print(array[i] + " ");
     }
 
     sc.close();
   }
-
 
 }
