@@ -1,15 +1,31 @@
-## Enuncitats Java curs 2021-2022
+# Teoria
 
-Aquí podeu trobar tots els programes que solucionen els diferents enunciats que anem proposant durant el curs.
+## UF01 - Programació estructurada
+
+[Introducció (pdf)](https://drive.google.com/file/d/1HcVw_7iNHt14V5Z4IVsTG74uw3BAZJvE/view)
 
 
-[DAW_MP03_0001_UF01_ProgramacioEstructurada_Introduccio.pdf](https://drive.google.com/file/d/1HcVw_7iNHt14V5Z4IVsTG74uw3BAZJvE/view?usp=sharing)
+[Programació Estructurada (pdf)](https://drive.google.com/file/d/17miMWSALxTOQ7WVUMR_8nj33GWCmKcq6/view)
 
 
-[DAW_MP03_0002_UF01_Programacio_Estructurada.pdf](https://drive.google.com/file/d/17miMWSALxTOQ7WVUMR_8nj33GWCmKcq6)
+## Configuració psint, enunciats i les seves solucions
 
-[002_ActivitatsProgramacioEstructurada_pseudo-codi](https://docs.google.com/document/d/1vxIv4B1M4ZkPUT8Gd9LdST90HbH9Ogcqbq0eA_tVR1w)
+![Configuració PsInt](./src/images/config_PSeInt_llenguatgeJava.png)
 
+[Enunciats de pseudocodi](https://docs.google.com/document/d/1vxIv4B1M4ZkPUT8Gd9LdST90HbH9Ogcqbq0eA_tVR1w/view)
+
+[Carpeta amb les solucions als enunciats](https://drive.google.com/drive/folders/1cJfeRTOa6o4RABzJuwijKmDx4jLB0h82)
+
+
+
+[Getting Started with Java in VS Code](https://code.visualstudio.com/docs/java/java-tutorial)
+
+[Enunciats, activitats i exercicis amb JAVA](https://docs.google.com/document/d/16LS34amjFw8euDG_pULGB0pzCmT_zRGDVfr8QhrSUas)
+
+
+## Teoria: Excepcions de Java - Try...Catch
+
+[Excepcions de Java - Try...Catch](https://docs.google.com/document/d/1fKWVEAKtMN9EmtzbMxcJpH74fX0GwpKhYuKxrfW_Zs8)
 
 
 ## Fitxers de teoria
@@ -31,8 +47,13 @@ Aquí podeu trobar tots els programes que solucionen els diferents enunciats que
 [A_Teoria_07B_FitxersEscriure.java](src/A_Teoria_07B_FitxersEscriure.java)
 
 
-## Enunciats de 
+[Exercicis Java per Nivells](https://docs.google.com/document/d/1jrEgevVfXIIybcjheUReFnLYNjH4vTWk6PeSKc6OMvk)
 
+
+
+## Enuncitats Java curs 2021-2022
+
+Aquí podeu trobar tots els programes que solucionen els diferents enunciats que anem proposant durant el curs.
 
 [Enu01_Hipotenusa.java](src/Enu01_Hipotenusa.java)
 
@@ -131,6 +152,13 @@ Aquí podeu trobar tots els programes que solucionen els diferents enunciats que
 [ProgramaCanvi.java](src/ProgramaCanvi.java)
 
 [SousTreballadors.java](src/SousTreballadors.java)
+
+
+[Enunciats per activitats amb funcions](https://docs.google.com/document/d/1efSk_S5um29Q6cViD8-kewi9vGVp7rSxSlKjn3STN5k)
+
+[Creació d'una Classe per poder reaprofitar codi.](https://sites.google.com/ginebro.cat/apunts/daw/daw-mp03/MP03-UF02-disseny-modular)
+
+[Reptes: Array](https://docs.google.com/document/d/1Q-85udw8y-4Nxx2IlbDT1nN3RM1SSWRhd_U-TRIdOaw)
 
 ## Examen_20211106
 
