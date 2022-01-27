@@ -33,5 +33,6 @@ public class SousTreballadors {
         }
         System.out.println("EL sou mitjà dels homes és " + (souhomes / contadorhomes));
         System.out.println("El sou mitjà de les dones és " + (soudones / contadordones));
+        sc.close();
     }
 }
