@@ -114,6 +114,11 @@ Enunciats de
 
 [EnuFulmigacio_2.java](src/EnuFulmigacio_2.java)
 
+[Exercici13.java](src/Exercici13.java)
+
+[ProgramaCanvi.java](src/ProgramaCanvi.java)
+
+[SousTreballadors.java](src/SousTreballadors.java)
 
 ## Examen_20211106
 
@@ -156,35 +161,29 @@ Enunciats de
 [Examen_20211220_MatIArr_activitat5.java](src/Examen_20211220_MatIArr_activitat5.java)
 
 
-## Exercici13
-
-[Exercici13.java](src/Exercici13.java)
 
 
-[01_Activitats_Programacio_Fitxers_](src/https://docs.google.com/document/d/1JDE_JIImSBufaYgvVi1euy4cPjMMgT9GsFUTMx9e5c0/edit?usp=sharing)
+[01_Activitats_Programacio_Fitxers_](https://docs.google.com/document/d/1JDE_JIImSBufaYgvVi1euy4cPjMMgT9GsFUTMx9e5c0/edit?usp=sharing)
 
-[Fitxers](src/Fitxers)
+## Fitxers
 
-[FitEnu01SumaCSV.java](src/FitEnu01SumaCSV.java)
+[FitEnu01SumaCSV.java](src/Fitxers/FitEnu01SumaCSV.java)
 
-[Fitxers.java](src/Fitxers.java)
+[Fitxers.java](src/Fitxers/Fitxers.java)
 
-[_fitEnt_Enu01.txt](src/_fitEnt_Enu01.txt)
+[_fitEnt_Enu01.txt](src/Fitxers/_fitEnt_Enu01.txt)
 
-[_fitSor_Enu01.txt](src/_fitSor_Enu01.txt)
+[_fitSor_Enu01.txt](src/Fitxers/_fitSor_Enu01.txt)
 
 [MatriuPlenaUnitats.java](src/MatriuPlenaUnitats.java)
 
 [MatriuPlenaUnitats2.java](src/MatriuPlenaUnitats2.java)
 
-[PardoJoanFuncions](src/PardoJoanFuncions)
+## PardoJoanFuncions
 
-[Aplicacio.java](src/Aplicacio.java)
+[Aplicacio.java](src/PardoJoanFuncions/Aplicacio.java)
 
-[Jpc.java](src/Jpc.java)
+[Jpc.java](src/PardoJoanFuncions/Jpc.java)
 
-[ProgramaCanvi.java](src/ProgramaCanvi.java)
-
-[SousTreballadors.java](src/SousTreballadors.java)
 
 
