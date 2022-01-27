@@ -2,6 +2,16 @@
 
 Aquí podeu trobar tots els programes que solucionen els diferents enunciats que anem proposant durant el curs.
 
+
+[DAW_MP03_0001_UF01_ProgramacioEstructurada_Introduccio.pdf](https://drive.google.com/file/d/1HcVw_7iNHt14V5Z4IVsTG74uw3BAZJvE/view?usp=sharing)
+
+
+[DAW_MP03_0002_UF01_Programacio_Estructurada.pdf](https://drive.google.com/file/d/17miMWSALxTOQ7WVUMR_8nj33GWCmKcq6)
+
+[002_ActivitatsProgramacioEstructurada_pseudo-codi](https://docs.google.com/document/d/1vxIv4B1M4ZkPUT8Gd9LdST90HbH9Ogcqbq0eA_tVR1w)
+
+
+
 ## Fitxers de teoria
 
 [A_Teoria_02_equals_boolean.java](src/A_Teoria_02_equals_boolean.java)
@@ -21,7 +31,9 @@ Aquí podeu trobar tots els programes que solucionen els diferents enunciats que
 [A_Teoria_07B_FitxersEscriure.java](src/A_Teoria_07B_FitxersEscriure.java)
 
 
-Enunciats de 
+## Enunciats de 
+
+
 [Enu01_Hipotenusa.java](src/Enu01_Hipotenusa.java)
 
 [Enu02_MostraNomEdat.java](src/Enu02_MostraNomEdat.java)
