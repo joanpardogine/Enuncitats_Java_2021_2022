@@ -8,8 +8,6 @@ public class FitEnu03_MatriuLinieal {
         int[][] matriu;
         int files, columnes;
 
-        Scanner teclat = new Scanner(System.in);
-
         System.out.print("Entra la quantitat de files: ");
         files = teclat.nextInt();
         System.out.print("Entra la quantitat de columnes: ");
