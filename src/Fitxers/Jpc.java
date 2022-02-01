@@ -3,6 +3,8 @@ package Fitxers;
 import java.util.Scanner;
 
 public class Jpc {
+    static Scanner teclat = new Scanner(System.in);
+
     // Fer una funció per llegir un nombre per teclat.
     // Aquesta funció haurà de tenir un paràmetre que sigui
     // el missatge a mostrar a l'usuari. Que retorni un int.
@@ -10,7 +12,6 @@ public class Jpc {
         int nombreLlegit = 0;
         boolean llegitNombre = false;
 
-        Scanner teclat = new Scanner(System.in);
         do {
             try {
                 llegitNombre = false;
@@ -22,7 +23,6 @@ public class Jpc {
                 teclat.nextLine();
             }
         } while (llegitNombre != false);
-        teclat.close();
         return nombreLlegit;
     }
 
