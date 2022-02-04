@@ -7,16 +7,17 @@ import java.util.Scanner;
 public class FitEnu06_DosFitxersTresMatrius {
     public static void main(String[] args) {
         int mida = Jpc.llegirEnterAmbMissatge("Entra la mida de matriu: ");
-        String nomFitxer = "Enuncitats_Java_2021_2022\\src\\Fitxers\\matIntroUsuari.txt";
-        int[][] matriu = new int[mida][mida];
+        String nomFitxer = "src\\Fitxers\\matIntroUsuari.txt";
+        String[][] matriu = new String[mida][mida];
         String[][] matriuAux = new String[mida][mida];
-        int[][] matriuTras = new int[mida][mida];
+        String[][] matriuTras = new String[mida][mida];
 
         // Omplim l'array demanant-li els valors a l'usuari
         for (int i = 0; i < matriu.length; i++) {
             for (int j = 0; j < matriu[i].length; j++) {
-                matriu[i][j] = Jpc.llegirEnterAmbMissatge(
-                        "Entra el número de la fila " + (i + 1) + " i la columna " + (j + 1) + ": ");
+                matriu[i][j] = Integer.toString((int) (Math.random() * 10));
+                // matriu[i][j] = Integer.toString(Jpc.llegirEnterAmbMissatge(
+                //         "Entra el número de la fila " + (i + 1) + " i la columna " + (j + 1) + ": "));
             }
         }
 
@@ -76,6 +77,8 @@ public class FitEnu06_DosFitxersTresMatrius {
                 System.out.println("Missatge 2: " + exepcio2.getMessage());
             }
         }
+
+        System.out.println("matriuAux");
         // for per mostrar la matriu matriuAux per pantalla
         for (int i = 0; i < matriuAux.length; i++) {
             for (int j = 0; j < matriuAux[i].length; j++) {
@@ -87,15 +90,43 @@ public class FitEnu06_DosFitxersTresMatrius {
         // for per transposar la matriu matriuAux a la matriuTras
         for (int i = 0; i < matriuAux.length; i++) {
             for (int j = 0; j < matriuAux[i].length; j++) {
-                matriuTras[i][j] = Integer.parseInt(matriuAux[j][i]);
+                matriuTras[i][j] = matriuAux[j][i]; // Integer.parseInt(matriuAux[j][i]);
             }
             System.out.println();
         }
 
-        // for per mostrar la matriu matriuAux per pantalla
+        System.out.println("matriuTras");
+        // for per mostrar la matriu matriuTras per pantalla
         for (int i = 0; i < matriuTras.length; i++) {
             for (int j = 0; j < matriuTras[i].length; j++) {
                 System.out.print(matriuTras[i][j] + " ");
+            }
+            System.out.println();
+        }
+        int index = 0;
+        // Part de codi per crear la matriu Intercalada!
+        String[][] matriuInter = new String[mida][mida + mida];
+        for (int i = 0; i < matriuInter.length - 1; i = i + 2) {
+
+            for (int j = 0; j < matriuInter.length; j++) {
+                matriuInter[i][j] = matriu[index][j];
+                matriuInter[i + 1][j] = matriuTras[index][j];
+            }
+
+            for (int j = 0; j < matriuInter.length; j++) {
+                System.out.println("matriuInter[i,index] " + matriuInter[i][j]);
+            }
+            for (int j = 0; j < matriuInter.length; j++) {
+                System.out.println("matriuInter[i+1,index] " + matriuInter[i + 1][j]);
+            }
+            index++;
+        }
+
+        System.out.println("matriuInter");
+        // for per mostrar la matriu matriuInter per pantalla
+        for (int i = 0; i < matriuInter.length; i++) {
+            for (int j = 0; j < matriuInter[i].length; j++) {
+                System.out.print(matriuInter[i][j] + " ");
             }
             System.out.println();
         }
