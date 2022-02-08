@@ -4,6 +4,9 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 public class FitEnu03_MatriuLinieal {
+
+    static Scanner teclat = new Scanner(System.in);
+
     public static void main(String[] args) {
         int[][] matriu;
         int files, columnes;
