@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Scanner;
 
-public class Repte01Correccio {
+public class Solucio_Repte01Correccio {
     public static void main(String[] args) throws Exception {
         Scanner teclat = new Scanner(System.in);
         String[] categories = { "Esmorzar", "Copes", "Dinars", "Berenars", "Sopar" };
