@@ -64,7 +64,6 @@ public class Agenda {
                     agenda[i][CORREU] + " - " +
                     agenda[i][ADRESA]);
         }
-        Ordres.pausa("\nPitja un tecla per continuar!");
     }
 
     public static void omplirMatriu(String[][] agenda) {
@@ -132,8 +131,30 @@ public class Agenda {
         return nombreLlegit;
     }
 
+    public static String[][] esborrarContacte(String[][] agenda) {
+        String[][] novaAgenda = new String[agenda.length - 1][QTAT_CAMPS];
+        int contacteAEliminar;
+        int posNovaAgenda = 0;
+        mostraAgenda(agenda);
+        mostrarMissatge("Quin contacte vols eliminar: ");
+
+        contacteAEliminar = teclat.nextInt();
+
+        for (int i = 0; i < agenda.length; i++) {
+            for (int j = 0; j < agenda[i].length; j++) {
+                if (i != contacteAEliminar - 1) {
+                    novaAgenda[posNovaAgenda][j] = agenda[i][j];
+                }
+            }
+            if (i != contacteAEliminar - 1) {
+                posNovaAgenda++;
+            }
+        }
+
+        return novaAgenda;
+    }
+
     public static String[][] afegirContacte(String[][] agenda) {
-        String nomLlegit;
         String[][] novaAgenda = new String[agenda.length + 1][QTAT_CAMPS];
         for (int i = 0; i < agenda.length; i++) {
             for (int j = 0; j < agenda[i].length; j++) {
@@ -220,13 +241,15 @@ public class Agenda {
                     System.out.println(operacions[opcio - 1]);
                     break;
                 case 2: // Esborrar
-                    System.out.println(operacions[opcio - 1]);
+                    agenda = esborrarContacte(agenda);
+
                     break;
                 case 3: // Modificar
                     System.out.println(operacions[opcio - 1]);
                     break;
                 case 4: // Mostrar
                     mostraAgenda(agenda);
+                    Ordres.pausa("\nPitja un tecla per continuar!");
                     break;
                 case 5: // Guardar + sortir
                     guardarAgenda(agenda);
