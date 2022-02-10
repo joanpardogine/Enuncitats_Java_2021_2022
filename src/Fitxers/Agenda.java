@@ -131,6 +131,29 @@ public class Agenda {
         return nombreLlegit;
     }
 
+    public static String[][] modificarContacte(String[][] agenda) {
+        int contacteAModificar;
+        int campAModificar;
+        String valorCamp;
+        mostraAgenda(agenda);
+        mostrarMissatge("Quin contacte vols modificar: ");
+
+        contacteAModificar = teclat.nextInt();
+
+        for (int i = 0; i < agenda.length; i++) {
+            System.out.println((i + 1) + " " + agenda[contacteAModificar - 1][i]);
+        }
+
+        mostrarMissatge("Quin camp vols modificar: ");
+        campAModificar = teclat.nextInt();
+        mostrarMissatge("Entra el nou valor: ");
+        valorCamp = teclat.next();
+        agenda[contacteAModificar - 1][campAModificar - 1] = valorCamp;
+
+        return agenda;
+
+    }
+
     public static String[][] esborrarContacte(String[][] agenda) {
         String[][] novaAgenda = new String[agenda.length - 1][QTAT_CAMPS];
         int contacteAEliminar;
@@ -163,15 +186,15 @@ public class Agenda {
         }
 
         mostrarMissatge("Entra el nom del nou contacte: ");
-        novaAgenda[agenda.length][NOM] = teclat.next();
+        novaAgenda[agenda.length][NOM] = teclat.nextLine();
         mostrarMissatge("Entra el cognom del nou contacte: ");
-        novaAgenda[agenda.length][COGNOM] = teclat.next();
+        novaAgenda[agenda.length][COGNOM] = teclat.nextLine();
         mostrarMissatge("Entra el telefon del nou contacte: ");
-        novaAgenda[agenda.length][TELEFON] = teclat.next();
+        novaAgenda[agenda.length][TELEFON] = teclat.nextLine();
         mostrarMissatge("Entra el correu del nou contacte: ");
-        novaAgenda[agenda.length][CORREU] = teclat.next();
+        novaAgenda[agenda.length][CORREU] = teclat.nextLine();
         mostrarMissatge("Entra l'adreça del nou contacte: ");
-        novaAgenda[agenda.length][ADRESA] = teclat.next();
+        novaAgenda[agenda.length][ADRESA] = teclat.nextLine();
 
         return novaAgenda;
     }
@@ -232,8 +255,8 @@ public class Agenda {
         do {
             Ordres.netejaConsola();
             mostraMenu(operacions); // , idioma);
-            // opcio = llegirEnterTeclat();
-            opcio = teclat.nextInt();
+            opcio = llegirEnterTeclat();
+            // opcio = teclat.nextInt();
 
             switch (opcio) {
                 case 1: // Afegir
@@ -245,7 +268,7 @@ public class Agenda {
 
                     break;
                 case 3: // Modificar
-                    System.out.println(operacions[opcio - 1]);
+                    modificarContacte(agenda);
                     break;
                 case 4: // Mostrar
                     mostraAgenda(agenda);
