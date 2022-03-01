@@ -47,10 +47,10 @@ public class Poligon {
    }
    
    public int numeroVertex() {
-      return this.punts.length + 1;
+      return this.punts.length;
    }
    
-   public int perimetre() {
+   // public int perimetre() {
       
-   }
+   // }
 }
