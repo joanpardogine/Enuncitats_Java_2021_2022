@@ -3,7 +3,7 @@ import java.io.FileWriter;
 public class A_Teoria_07B_FitxersEscriure {
 
     public static void main(String[] args) {
-
+        String nomFitxer = "fitxer_escriure.txt";
         String[] paraules = { "En un lugar de la Macha",
                 "de cuyo nombre no quiero acordarme",
                 "no ha mucho tiempo que vivia un hidalgo",
@@ -15,7 +15,7 @@ public class A_Teoria_07B_FitxersEscriure {
         FileWriter fitxer = null;
         try {
 
-            fitxer = new FileWriter("fitxer_escriure.txt");
+            fitxer = new FileWriter(nomFitxer);
 
             // Escrivim línia a línia en el fitxer
             for (int i = 0; i < paraules.length; i++) { // String linia : paraules) {

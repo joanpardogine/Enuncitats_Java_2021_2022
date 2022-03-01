@@ -6,7 +6,8 @@ public class A_Teoria_07A_FitxersLlegir {
         // Recordar que el Endcoding cal que sigui => "Windows 1250"
 
         // Nom de fitxer del que volem llegit
-        File fitxer = new File("fitxer_llegir.txt");
+        String nomFitxer = "fitxer_llegir.txt";
+        File fitxer = new File(nomFitxer);
         Scanner punter = null;
         String linia = "";
 
