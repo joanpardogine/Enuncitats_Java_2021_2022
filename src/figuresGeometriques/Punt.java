@@ -12,11 +12,23 @@ public class Punt {
       private double coorY;
       
       // Constructors
+      // Constructor sense parametres
+      // Les dues coordenades seran 0
       public Punt(){
          this.coorX = 0;
          this.coorY = 0;
       }
       
+      // Constructor amb un parametre
+      // Les dues coordenades seran igual al parametre rebut
+      public Punt(double coorRebuda) {
+         this.coorX = coorRebuda;
+         this.coorY = coorRebuda;
+      }
+      
+      // Constructor amb dos parametres
+      // La coordenada X serï¿½ el primer dels  parametres rebuts
+      // La coordenada Y serï¿½ el segon dels  parametres rebuts
       public Punt(double coorXRebuda,double coorYRebuda) {
          this.coorX = coorXRebuda;
          this.coorY = coorYRebuda;
@@ -36,13 +48,13 @@ public class Punt {
       }
 
       public void setCoorY(double coorYRebuda) {
-         this.coorX = coorYRebuda;
+         this.coorY = coorYRebuda;
       }
       
-      // Mètodes
+      // Mï¿½todes
       public String toString() {
-         return ("La coordenada X és : " + this.coorX + "\n"
-               + "La coordenada Y és : " + this.coorY);
+         return ("La coordenada X : " + this.coorX + "\n"
+               + "La coordenada Y : " + this.coorY);
       }
       
       public double distancia(Punt puntOrigen) {
@@ -54,7 +66,7 @@ public class Punt {
                   );
          }
          catch (Exception e) {
-            System.out.print("El punt està buit!" 
+            System.out.print("El punt estï¿½ buit!" 
                   + e.getMessage());
          }
          
