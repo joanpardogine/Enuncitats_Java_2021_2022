@@ -50,7 +50,14 @@ public class Poligon {
       return cadenaAMostrar;
    }
 
-   // mï¿½todes
+   // mètodes
+   public void elimina(){
+      this.punts = null;
+      this.qtatVertexs = 0;
+   }
+   
+   
+   
    public void traslladar(double trasCoorX, double trasCoorY) {
       double valorCoorX, valorCoorY;
       for (int i = 0; i < this.punts.length; i++) {

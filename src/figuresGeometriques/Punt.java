@@ -51,11 +51,21 @@ public class Punt {
          this.coorY = coorYRebuda;
       }
       
+      public void setPunt(double coorRebuda) {
+         this.coorX = coorRebuda;
+         this.coorY = coorRebuda;
+      }
+      
+
       // M�todes
       public String toString() {
-         return ("La coordenada X : " + this.coorX + "\n"
-               + "La coordenada Y : " + this.coorY);
+         return ("(" + this.coorX + "," + this.coorY + ")");
       }
+
+      // public String toString() {
+      //    return ("La coordenada X : " + this.coorX + "\n"
+      //          + "La coordenada Y : " + this.coorY);
+      // }
       
       public double distancia(Punt puntOrigen) {
          double distanciaACalcular = 0;
