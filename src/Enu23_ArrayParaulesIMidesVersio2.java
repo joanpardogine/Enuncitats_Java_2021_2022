@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Enu23_ArrayParulesIMidesVersio2 {
+public class Enu23_ArrayParaulesIMidesVersio2 {
     public static void main(String[] args) throws Exception {
         final int MIDA = 5;
 

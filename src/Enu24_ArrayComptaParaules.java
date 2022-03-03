@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Enu24_ArrayComptaParules {
+public class Enu24_ArrayComptaParaules {
     public static void main(String args[]) throws Exception {
         final int MIDA = 5;
         String[] arrCadenes = new String[MIDA];
