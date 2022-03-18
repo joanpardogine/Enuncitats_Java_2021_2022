@@ -46,17 +46,25 @@ public class Cotxe {
 
     private char tornaConsonant() {
         // ASCII E = 69 , I = 73, O = 79, U = 85 
-        int codiConsonant;
+        char[] vocals = {'E','I','O','U'};
+        char codiConsonant;
         boolean esVocal;
         do {
             esVocal = false;
-            codiConsonant = (int) (Math.random() * (90 - 66) + 66);
-            if ( codiConsonant == 69 ||
-                 codiConsonant == 73 ||
-                 codiConsonant == 79 ||
-                 codiConsonant == 85) {
-                esVocal = true;
+            codiConsonant = (char) (Math.random() * (90 - 66) + 66);
+            for (char c : vocals) {
+                if(codiConsonant==c){                     
+                    esVocal = true;
+                    break;
+                } 
             }
+   
+            // if ( codiConsonant == 69 ||
+            //      codiConsonant == 73 ||
+            //      codiConsonant == 79 ||
+            //      codiConsonant == 85) {
+            //     esVocal = true;
+            // }
         } while (esVocal);
         return (char) (codiConsonant);
     }
@@ -94,10 +102,10 @@ public class Cotxe {
     }
 
     public String toString() {
-        return      "  color     = " + this.color
-                + "\n  marca     = " + this.marca
-                + "\n  matricula = " + this.matricula
-                + "\n  model     = " + this.model;
+        return      "  marca     = " + this.marca
+                + "\n  model     = " + this.model
+                + "\n  color     = " + this.color
+                + "\n  matricula = " + this.matricula;
     }
 
 }
