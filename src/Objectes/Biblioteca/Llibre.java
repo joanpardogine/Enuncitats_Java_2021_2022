@@ -67,10 +67,10 @@ public class Llibre {
     @Override
     public String toString() {
         return "Llibre\n" 
-        + "autor    = " +  this.autor + ",\n"
-        + "exemplar = " +  this.exemplars +  ",\n"
-        + "prestec  = " +  this.prestec  + ",\n"
-        + "titol    = " +  this.titol;
+        + " -- titol            = " +  this.titol + ",\n"
+        + " -- autor            = " +  this.autor + ",\n"
+        + " -- qtat exemplars   = " +  this.exemplars +  ",\n"
+        + " -- qtat en prestec  = " +  this.prestec + "\n";
     }
     
     // Mètodes

@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Biblioteca {
     private String nom;
     // private int qtatMaxima;
-    private Llibre[] prestatge = new Llibre[1];
     private int qtatLlibres;
+    private Llibre[] prestatge;
 
     // public Biblioteca(String nom, int qtatMaxima) {
     public Biblioteca(String nom) {
@@ -55,29 +55,58 @@ public class Biblioteca {
         this.prestatge = prestatge;
     }
 
+    public void llistatDeLlibresPerTitol(){
+        for (int i = 0; i < this.prestatge.length; i++) {
+            System.out.println("Llibre número " + (i+1) + ": " +
+            this.getPrestatge()[i].getTitol());
+        }
+    }
+
     @Override
     public String toString() {
-        return "Biblioteca\n"
-                + "nom=" + this.nom + "\n"
+        if (this.qtatLlibres == 0) {
+            return ("La biblioteca " + this.nom
+                    + " està buida!");
+        }
+        return "Nom biblioteca = " + this.nom + "\n"
                 + "prestatge=" + Arrays.toString(this.prestatge);
         // + "qtatMaxima=" + this.qtatMaxima;
     }
 
-    public void afegirLlibre(Llibre llibreRebut) {
-        Llibre[] prestatgeAuxiliar = new Llibre[this.qtatLlibres + 1];
-        for (int i = 0; i < this.prestatge.length; i++) {
-            prestatgeAuxiliar[i] = this.prestatge[i];
+    private int buscaLlibre(String titolLlibreABuscar) {
+        if (this.prestatge.length != 0) {
+            for (int i = 0; i < prestatge.length; i++) {
+                if (prestatge[i].getTitol().equals(titolLlibreABuscar)) {
+                    return i;
+                }
+            }
         }
-        prestatgeAuxiliar[this.qtatLlibres + 1] = llibreRebut;
-        this.prestatge = prestatgeAuxiliar;
+        return -1;
+    }
+
+    public void afegirLlibre(Llibre prestatgeRebut) {
+        if (buscaLlibre(prestatgeRebut.getTitol()) == -1) {
+            Llibre[] prestatgeAuxiliar = new Llibre[this.qtatLlibres + 1];
+            for (int i = 0; i < this.qtatLlibres; i++) {
+                prestatgeAuxiliar[i] = this.prestatge[i];
+            }
+            prestatgeAuxiliar[prestatgeAuxiliar.length - 1] = prestatgeRebut;
+            this.prestatge = prestatgeAuxiliar;
+            this.qtatLlibres++;
+            System.out.println("El llibre amb titol " +
+            prestatgeRebut.getTitol() +
+            " afegit correctament!");
+        } else { // si que existeix xq és diferent de -1
+            System.out.println("El llibre amb titol " +
+                    prestatgeRebut.getTitol() +
+                    " ja existeix!");
+        }
     }
 
     public void esborrarLlibre(Llibre llibreRebut) {
         // Pendent de desenvolupar
         this.qtatLlibres = 1;
     }
-
-
 
 }
 
