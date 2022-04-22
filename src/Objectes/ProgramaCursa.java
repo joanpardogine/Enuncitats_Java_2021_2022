@@ -29,10 +29,6 @@ public class ProgramaCursa {
         for (int i = 0; i < curses.length; i++) {
             curses[i].setVoltes(tornaAleatori(1, 50));
         }
-        System.out.println("Informació distància recorreguda");
-        System.out.println("================================");
-        for (int i = 0; i < curses.length; i++) {
-        }
         
         System.out.println("\nInformació de les curses");
         System.out.println("========================");
